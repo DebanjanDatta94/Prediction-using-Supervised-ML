@@ -1,0 +1,30 @@
+```{r}
+
+NAME: DEBANJAN DATTA
+THE SPARKS FOUNDATION
+
+DATA SCIENCE AND BUSINESS ANALYTICS INTERN
+
+TASK 1: Prediction using Supervised ML
+PROBLEM STATEMENT: Predict the percentage of an student based on the no. of study hours.
+
+
+getwd()
+path<-"C:/Users/HP/Downloads"
+setwd(path)
+
+traindata<-read.csv("Sparks.csv",header=TRUE,stringsAsFactors = FALSE)
+
+tail(traindata)
+
+
+
+testdata<-data.frame(Hours=9.25,Scores="NA")
+
+model<-lm(Scores~.,data=traindata)
+summary(model)
+
+predict(model,testdata)
+
+```
+
